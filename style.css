@@ -9,7 +9,11 @@ body {
 }
 
 header {
-    border-bottom: 5px solid orange;
+  background: linear-gradient(
+    102deg,
+    rgba(121, 91, 185, 1) 5%,
+    rgba(109, 110, 216, 1) 74%
+  );
 }
 
 .container {
