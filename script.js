@@ -19,26 +19,24 @@ function loadImg() {
 
   fetch(url)
     .then((response) => {
-        // console.log(response);
+      // console.log(response);
       if (!response.ok) throw Error(response.statusText);
       return response.json();
     })
 
     .then((data) => {
-        const imageNodes = [];
-        for(let i=0; i<data.results.length; i++){
-            imageNodes[i] = document.createElement('div');
-            imageNodes[i].className = 'img';
-            imageNodes[i].style.backgroundImage = 'url('+data.results[i].urls.raw+')';
-            imageNodes[i].addEventListener('dblclick', function () {
-                window.open(data.results[i].links.download, '_blank');
-            })
-            grid.appendChild(imageNodes[i]);
-        }
-    //   loadImg(data);
-    })
-
-    // .catch((error) => console.log(error));
+      const imageNodes = [];
+      for (let i = 0; i < data.results.length; i++) {
+        imageNodes[i] = document.createElement("div");
+        imageNodes[i].className = "img";
+        imageNodes[i].style.backgroundImage =
+          "url(" + data.results[i].urls.raw + ")";
+        imageNodes[i].addEventListener("dblclick", function () {
+          window.open(data.results[i].links.download, "_blank");
+        });
+        grid.appendChild(imageNodes[i]);
+      }
+    });
 }
 
 function removeImage() {
@@ -50,7 +48,7 @@ function dayNightMode() {
   const hour = date.getHours();
 
   if (hour >= 7 && hour <= 19) {
-    document.body.style.backgroundColor = "whitesmoke";
+    document.body.style.backgroundColor = "white";
     document.body.style.color = "black";
   } else {
     document.body.style.backgroundColor = "black";
