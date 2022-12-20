@@ -1,11 +1,12 @@
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 body {
   background-color: black;
   color: white;
+  overflow-x: hidden;
 }
 
 header {
@@ -21,31 +22,32 @@ header {
   margin: auto;
 }
 
-.nav {
+#header {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 25px;
 }
 
-.nav h2 {
+#header h2 {
   font-size: 2rem;
 }
 
-.search-box {
+#search_box {
   position: relative;
   width: 350px;
 }
 
-.search-box input {
+#search_box input {
   box-sizing: border-box;
   width: 100%;
   font-size: 1rem;
   padding: 8px;
   border-radius: 25px;
+  outline: none;
 }
 
-.grid {
+#grid {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
@@ -55,9 +57,10 @@ header {
 
 .img {
   width: 380px;
-  height: 200px;
+  height: 214px;
   margin-top: 15px;
-  background-position: 50% 50%;
+  background-position: center;
   background-size: cover;
   border-radius: 2px;
+  cursor: pointer;
 }

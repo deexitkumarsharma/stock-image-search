@@ -8,24 +8,30 @@
     <title>Stock Image Search</title>
   </head>
   <body>
-    <header>
-      <div class="container">
-        <div class="nav">
-          <h2>Unsplash API demo</h2>
-          <div class="search-box">
-            <input
-              type="text"
-              id="input"
-              placeholder="Search any keyword + Enter"
-              onclick="loadImg()"
-            />
+    <main>
+      <header>
+        <div class="container">
+          <div id="header">
+            <h2>Unsplash API Demo</h2>
+            <div id="search_box">
+              <input
+                id="input"
+                type="text"
+                placeholder="Search any keyword + Enter"
+                onclick="apiRequest()"
+              />
+            </div>
           </div>
         </div>
-      </div>
-    </header>
-    <div class="container">
-      <div class="grid"></div>
-    </div>
+      </header>
+
+      <section>
+        <div class="container">
+          <div id="grid"></div>
+        </div>
+      </section>
+    </main>
+
     <script src="script.js"></script>
   </body>
 </html>
